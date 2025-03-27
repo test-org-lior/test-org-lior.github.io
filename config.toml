@@ -1,0 +1,9 @@
+base_url = "https://test-org-lior.github.io"
+title = "My Awesome Site"
+description = "A simple Zola site"
+
+# Enable syntax highlighting
+[markdown]
+highlight_code = true
+
+    

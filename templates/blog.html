@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config.title }} - Blog</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+    </nav>
+    
+    <main>
+        <h1>{{ section.title }}</h1>
+        {{ section.content | safe }}
+        
+        <h2>Posts</h2>
+        <ul>
+            {% for page in section.pages %}
+            <li>
+                <a href="{{ page.permalink }}">{{ page.title }}</a>
+                <span>({{ page.date }})</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        <p>© {{ now() | date(format="%Y") }} - Built with Zola</p>
+    </footer>
+</body>
+</html>
+
+    

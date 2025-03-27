@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config.title }}</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+    </nav>
+    
+    <main>
+        {{ section.content | safe }}
+    </main>
+
+    <footer>
+        <p>© {{ now() | date(format="%Y") }} - Built with Zola</p>
+    </footer>
+</body>
+</html>
+
+    

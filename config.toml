@@ -4,7 +4,6 @@ description = "A simple Zola site"
 
 
 build_search_index = true
-generate_feed = true
 
 
 # Enable syntax highlighting

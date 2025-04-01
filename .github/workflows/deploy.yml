@@ -1,4 +1,4 @@
-name: Deploy website
+name: Deploy zola website
 
 on:
   push:
@@ -20,14 +20,14 @@ jobs:
       - name: Build only
         uses: shalzz/zola-deploy-action@v0.19.1
         env:
-          BUILD_DIR: .
+          BUILD_DIR: website
           BUILD_ONLY: true
           BUILD_THEMES: false
-          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./website/public
 
   deploy:
     environment:
